@@ -8,7 +8,8 @@
               "condition": "minecraft:location_check",
               "predicate": {
                 "block": {
-                    "tag": "tcamp:heads"
+                    "tag": "tcamp:heads",
+                    "nbt": "{SkullOwner:{Name:\"%tcamp.camp\"}}"
                 }
               }
             }

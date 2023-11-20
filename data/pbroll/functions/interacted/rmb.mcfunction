@@ -11,8 +11,8 @@ tag @s add pbroll.player.interacted
 scoreboard players reset $pbroll.time
 execute store result score $pbroll.time pbroll.dummy run time query daytime
 
-execute unless predicate pbroll:is_in_overworld as @e[tag=pbroll.interaction.bedroll,nbt={interaction:{}},predicate=!pbroll:is_in_overworld] at @s run summon marker ~ ~ ~ {NoGravity:1b,Tags:["pbroll.marker","pbroll.marker.explode"]}
-execute unless predicate pbroll:is_in_overworld as @e[tag=pbroll.interaction.bedroll,nbt={interaction:{}},predicate=!pbroll:is_in_overworld] at @s run function pbroll:remove/main
+execute unless predicate pbroll:is_in_overworld as @e[tag=camp.pbroll.interaction.bedroll,nbt={interaction:{}},predicate=!pbroll:is_in_overworld] at @s run summon marker ~ ~ ~ {NoGravity:1b,Tags:["pbroll.marker","pbroll.marker.explode"]}
+execute unless predicate pbroll:is_in_overworld as @e[tag=camp.pbroll.interaction.bedroll,nbt={interaction:{}},predicate=!pbroll:is_in_overworld] at @s run function pbroll:remove/main
 
 execute as @e[tag=pbroll.marker.explode] at @s run summon tnt ~ ~ ~ {NoGravity:1b,Fuse:0}
 execute as @e[tag=pbroll.marker.explode] run kill @s
@@ -22,9 +22,9 @@ execute as @s[tag=pbroll.player.sleeping,tag=pbroll.player.interacted] at @s run
 execute as @s[tag=pbroll.player.interacted] unless predicate pbroll:sleepy_time run tag @s remove pbroll.player.interacted
 execute as @s[tag=pbroll.player.interacted] if predicate pbroll:sleepy_time if entity @e[type=#pbroll:monsters,distance=..10] run tag @s remove pbroll.player.interacted
 
-execute as @s[tag=!pbroll.player.interacted] as @e[tag=pbroll.interaction.bedroll,nbt={interaction:{}}] run data remove entity @s interaction
+execute as @s[tag=!pbroll.player.interacted] as @e[tag=camp.pbroll.interaction.bedroll,nbt={interaction:{}}] run data remove entity @s interaction
 
-execute if predicate pbroll:sleepy_time as @s[tag=!pbroll.player.sleeping,tag=pbroll.player.interacted] as @e[tag=pbroll.interaction.bedroll,nbt={interaction:{}}] at @s run function pbroll:use/main
+execute if predicate pbroll:sleepy_time as @s[tag=!pbroll.player.sleeping,tag=pbroll.player.interacted] as @e[tag=camp.pbroll.interaction.bedroll,nbt={interaction:{}}] at @s run function pbroll:use/main
 
 
 

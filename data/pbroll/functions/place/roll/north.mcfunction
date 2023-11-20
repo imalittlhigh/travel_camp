@@ -1,0 +1,11 @@
+##
+ # north.mcfunction
+ # 
+ #
+ # Created by imalittlhigh.
+##
+
+#red
+summon interaction ~ ~-0.5 ~ {response:1b,NoGravity:1b,height:0.1f,Tags:["pbroll.interaction.bedroll.red","pbroll.interaction.bedroll.north.head","pbroll.interaction.bedroll.north","camp.pbroll.interaction.bedroll","pbroll.interaction"]}
+summon interaction ~ ~-0.5 ~-1 {response:1b,NoGravity:1b,height:0.1f,Tags:["pbroll.interaction.bedroll.red","pbroll.interaction.bedroll.north.feet","pbroll.interaction.bedroll.north","camp.pbroll.interaction.bedroll","pbroll.interaction"]}
+summon block_display ~-0.5 ~-0.5 ~-0.5 {Tags:["pbroll.block_display.bedroll.red","pbroll.block_display.bedroll","pbroll.block_display"],Passengers:[{id:"minecraft:block_display",Tags:["pbroll.block_display.bedroll.red","pbroll.block_display.bedroll","pbroll.block_display"],block_state:{Name:"minecraft:red_carpet",Properties:{}},transformation:[-0.0000f,0.0000f,-1.0000f,1.0000f,0.0000f,1.0000f,0.0000f,0.0000f,1.0000f,0.0000f,-0.0000f,-1.0000f,0.0000f,0.0000f,0.0000f,1.0000f]},{id:"minecraft:block_display",Tags:["pbroll.block_display.bedroll.red","pbroll.block_display.bedroll","pbroll.block_display"],block_state:{Name:"minecraft:red_carpet",Properties:{}},transformation:[-0.0000f,0.0000f,-1.0000f,1.0000f,0.0000f,1.0000f,0.0000f,0.0000f,0.6250f,0.0000f,-0.0000f,0.0000f,0.0000f,0.0000f,0.0000f,1.0000f]},{id:"minecraft:block_display",Tags:["pbroll.block_display.bedroll.red","pbroll.block_display.bedroll","pbroll.block_display"],block_state:{Name:"minecraft:white_carpet",Properties:{}},transformation:[-0.0000f,0.0000f,-1.0000f,1.0000f,0.0000f,1.0000f,0.0000f,0.0000f,0.3750f,0.0000f,-0.0000f,0.6250f,0.0000f,0.0000f,0.0000f,1.0000f]},{id:"minecraft:block_display",Tags:["pbroll.block_display.bedroll.red","pbroll.block_display.bedroll","pbroll.block_display"],block_state:{Name:"minecraft:red_carpet",Properties:{}},transformation:[-0.0000f,0.0000f,-0.8750f,0.9375f,0.0000f,1.0000f,0.0000f,0.0625f,1.3125f,0.0000f,-0.0000f,-0.9375f,0.0000f,0.0000f,0.0000f,1.0000f]},{id:"minecraft:block_display",Tags:["pbroll.block_display.bedroll.red","pbroll.block_display.bedroll","pbroll.block_display"],block_state:{Name:"minecraft:white_carpet",Properties:{}},transformation:[-0.0000f,0.0000f,-0.8750f,0.9375f,0.0000f,1.0000f,0.0000f,0.0625f,0.2500f,0.0000f,-0.0000f,0.6875f,0.0000f,0.0000f,0.0000f,1.0000f]}]}
