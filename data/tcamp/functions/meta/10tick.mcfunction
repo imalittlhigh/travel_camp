@@ -5,12 +5,12 @@
  # Created by imalittlhigh.
 ##
 
-
-execute as @e[type=interaction,tag=tcamp.interaction.tent.setup,scores={tcamp.dummy=600..}] at @s run function tcamp:remove/preview/main
-
+#remove preview after 60 secs, so it doesnt just clutter up stuff
+#execute as @e[type=interaction,tag=tcamp.interaction.tent.setup,scores={tcamp.dummy=600..}] at @s run function tcamp:remove/preview/main
+#display particles if only 10 secs left before removal
 execute as @e[type=interaction,tag=tcamp.interaction.tent.setup,scores={tcamp.dummy=500..}] at @s run particle cloud ~ ~0.2 ~ 0.1 0.1 0.1 0.001 1 normal
 
-
+#add timer to previwe interaction
 scoreboard players add @e[tag=tcamp.interaction.tent.setup,type=interaction] tcamp.dummy 5
 
 
