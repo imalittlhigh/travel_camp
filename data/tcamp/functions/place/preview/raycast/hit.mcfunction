@@ -19,5 +19,5 @@ execute at @s run kill @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest]
 
 ##camp tents
 #test what type of camp item it is id[0] = type, id[1] = size, id[2] = colour
-execute if block ~ ~ ~ #tcamp:heads{SkullOwner:{Id:[I;1,1,1,1],Name:"%tcamp.camp"}} run function tcamp:place/preview/tent/small
+execute if block ~ ~ ~ #tcamp:heads{SkullOwner:{Id:[I;1,1,1,6],Name:"%tcamp.camp"}} run function tcamp:place/preview/tent/small
 
