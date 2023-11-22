@@ -4,4 +4,5 @@
  #
  # Created by imalittlhigh.
 ##
-execute as @e[type=item,limit=1,sort=nearest] at @s run data modify entity @s Item.tag.camp set from block ~ ~-1 ~ Items
+execute as @e[type=item,limit=1,sort=nearest] at @s run data modify entity @s Item.tag.camp.containers.chests append from block ~ ~-1 ~ Items
+execute as @e[type=item,limit=1,sort=nearest] run data modify entity @s Item.tag.camp.colour set value "red"

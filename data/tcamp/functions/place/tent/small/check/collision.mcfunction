@@ -7,7 +7,7 @@
 
 tag @s remove tcamp.player.has_sufficient_durability
 
-#testing if tent hast enouth space to be placed and if not, thorwing error
+#testing if tent hast enougth space to be placed and if not, thorwing error
 #east
 execute if entity @e[tag=tcamp.marker.hold_campinfo,distance=..1,sort=nearest,limit=1,tag=tcamp.marker.hold_campinfo.direction.east] align xyz if predicate tcamp:collision/tents/small/east run function tcamp:place/tent/small/place/east
 execute if entity @e[tag=tcamp.marker.hold_campinfo,distance=..1,sort=nearest,limit=1,tag=tcamp.marker.hold_campinfo.direction.east] align xyz unless predicate tcamp:collision/tents/small/east run function tcamp:place/tent/small/check/error

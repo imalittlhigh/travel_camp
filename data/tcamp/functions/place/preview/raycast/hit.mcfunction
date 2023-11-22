@@ -15,6 +15,7 @@ execute at @s run data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,
 #copying name of item to item from armorstand
 execute at @s run data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest] ArmorItems[3].tag.name set from entity @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest] Item.tag.name
 execute at @s run data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest] ArmorItems[3].tag.color set from entity @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest] Item.tag.color
+
 #removing set_info tag from armorstand
 execute positioned ~ ~-0.5 ~ run tag @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest] remove tcamp.marker.hold_campinfo.set_info
 #removing the temp item

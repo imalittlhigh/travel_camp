@@ -11,3 +11,12 @@ north = west with x = z, z = x & x * -1
 small tent blocks: 15
 
 unbreaking: 50,66,75% of not using dura
+
+check if tent is in block already
+
+
+
+
+
+
+
