@@ -17,7 +17,7 @@
       }
     },
     "rewards": {
-      "function": "tcamp:place/tent/small/main"
+      "function": "tcamp:place/tent/main"
     }
   }
   

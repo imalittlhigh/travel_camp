@@ -15,6 +15,9 @@ execute positioned ~ ~3 ~ run item replace entity @e[tag=tcamp.cart.copy_campinf
 summon item ~ ~ ~ {NoGravity:1b,Age:5900,PickupDelay:32767,Invulnerable:1b,Tags:["tcamp","tcamp.item","tcamp.item.copy_campinfo"],Item:{id:"minecraft:ender_eye",Count:1b,tag:{camp:{}}}}
 #copies item tags
 data modify entity @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest] Item.tag.camp set from entity @e[tag=tcamp.cart.copy_campinfo,limit=1,sort=nearest] Items[0].tag.camp
+#copies item name
+data modify entity @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest] Item.tag.name set from entity @e[tag=tcamp.cart.copy_campinfo,limit=1,sort=nearest] Items[0].tag.display.Name
+data modify entity @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest] Item.tag.color set from entity @e[tag=tcamp.cart.copy_campinfo,limit=1,sort=nearest] Items[0].tag.display.color
 #removes item from minecart
 execute positioned ~ ~3 ~ run item replace entity @e[tag=tcamp.cart.copy_campinfo,limit=1,sort=nearest] container.0 with air
 #removes minecart
