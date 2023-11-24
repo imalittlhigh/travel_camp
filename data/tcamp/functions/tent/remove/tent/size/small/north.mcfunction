@@ -4,14 +4,14 @@
  #
  # Created by imalittlhigh.
 ##
-say remove west
+say remove north
 
 
 #saving container info to armorstand head item
-data modify entity @s data.camp.containers.chests append from block ~-1 ~ ~ Items
+data modify entity @s data.camp.containers.chests append from block ~ ~ ~-1 Items
 
 #clearing copied containers
-data remove block ~-1 ~ ~ Items
+data remove block ~ ~ ~-1 Items
 
 #spawning head item according to colour
 #red
@@ -33,12 +33,12 @@ tag @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort
 
 
 #replace structure with air
-setblock ~ ~ ~ structure_block[mode=load]{name:"tcamp:tent_empty/small/tent_small_west",posX:-2,posY:0,posZ:-1,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:1b} replace
+setblock ~ ~ ~ structure_block[mode=load]{name:"tcamp:tent_empty/small/tent_small_north",posX:-1,posY:0,posZ:-2,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:1b} replace
 setblock ~ ~1 ~ redstone_block
 setblock ~ ~1 ~ air
 setblock ~ ~ ~ air
 
 #remove interaction confirmation
-execute align xyz positioned ~ ~1 ~ run function tcamp:interactables/remove/confirmation/west
+execute align xyz positioned ~ ~1 ~ run function tcamp:interactables/remove/confirmation/north
 
 kill @s

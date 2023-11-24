@@ -23,7 +23,7 @@ execute positioned ~0.5 ~ ~0.5 run data modify block ~-1 ~ ~ Items set from enti
 
 #options
 #summoning item displays for options and interactions
-execute positioned ~ ~1 ~ run function tcamp:interactables/spawn/options/west
+execute align xyz positioned ~ ~1 ~ run function tcamp:interactables/spawn/options/west
 
 #summoning marker to save size and direction and colour
 execute align xyz positioned ~0.5 ~ ~0.5 run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Tags:["tcamp","tcamp.marker","tcamp.marker.campinfo","tcamp.marker.campinfo.small"]}
