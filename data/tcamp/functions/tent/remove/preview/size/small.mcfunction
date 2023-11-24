@@ -6,8 +6,6 @@
 ##
 
 #add effects for removal
-function tcamp:remove/preview/effects/sound
-function tcamp:remove/preview/effects/visual
 
 #spawn head item
 #colour:
@@ -23,7 +21,7 @@ execute at @s run data modify entity @e[type=item,nbt={Item:{tag:{SkullOwner:{Na
 #name colour
 execute at @s run data modify entity @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest,tag=tcamp.item.modify] Item.tag.display.color set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..1] ArmorItems[3].tag.color
 #add lore if items are stored
-execute at @s if data entity @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest,tag=tcamp.item.modify] Item.tag.camp.containers.chests[0].[] run data merge entity @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest,tag=tcamp.item.modify] {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute as @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest,tag=tcamp.item.modify] run function tcamp:cardinal/modify_item/add_lore
 
 #unmark head item
 tag @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest] remove tcamp.item.modify

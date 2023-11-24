@@ -22,6 +22,6 @@ execute positioned ~ ~-0.5 ~ run tag @e[tag=tcamp.marker.hold_campinfo.set_info,
 execute at @s run kill @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest]
 
 ##camp tents
-#test what type of camp item it is id[0] = type, id[1] = size, id[2] = colour
+#test what type of camp item it is id[1] = type, id[2] = size, id[3] = colour
 execute if block ~ ~ ~ #tcamp:heads{SkullOwner:{Id:[I;1,1,1,6],Name:"%tcamp.camp"}} run function tcamp:tent/spawn/preview/size/small
 

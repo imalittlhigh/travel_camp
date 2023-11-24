@@ -25,8 +25,8 @@ data modify entity @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}
 data modify entity @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest,tag=tcamp.item.modify] Item.tag.display.Name set from entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..2] data.name
 #name colour
 data modify entity @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest,tag=tcamp.item.modify] Item.tag.display.color set from entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..2] data.color
-#add lore if items are stored
-function tcamp:cardinal/modify_item/add_stored_lore
+#add lore to head item (items stored?) [(Colour) (size)] <- needs to be adde to add_lore function
+execute as @e[tag=tcamp.item.modify] at @s run function tcamp:cardinal/modify_item/add_lore
 #unmark head item
 tag @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest] remove tcamp.item.modify
 
