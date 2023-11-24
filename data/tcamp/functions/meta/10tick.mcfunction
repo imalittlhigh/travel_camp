@@ -10,8 +10,8 @@
 #display particles if only 10 secs left before removal
 execute as @e[type=interaction,tag=tcamp.interaction.tent.setup,scores={tcamp.dummy=500..}] at @s run particle cloud ~ ~0.2 ~ 0.1 0.1 0.1 0.001 1 normal
 
-#dismantle interaction
-execute as @e[tag=tcamp.interaction.tent.options.confirm,scores={tcamp.dummy=50..}] at @s align xyz positioned ~ ~ ~-1 run function tcamp:interactables/tent/confirm_timeout
+#dismantle interaction and respwn options
+execute as @e[tag=tcamp.interaction.tent.options.confirm,scores={tcamp.dummy=50..}] at @s align xyz positioned ~ ~ ~-1 run function tcamp:interactables/reset/confirmation/main
 
 
 #add timer to previwe interaction

@@ -18,7 +18,7 @@
       }
     },
     "rewards": {
-      "function": "tcamp:place/preview/raycast/init"
+      "function": "tcamp:tent/spawn/preview/raycast/init"
     }
   }
   
