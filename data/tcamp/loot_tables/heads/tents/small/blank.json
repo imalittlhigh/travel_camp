@@ -10,7 +10,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"Travel Tent\"}'},SkullOwner:{Id:[I;1,1,1,6],Name:\"%tcamp.camp\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y0ODc2YjZhNWQ2ZGQ3ODVlMDkxZmQxMzRhMjFjOTFkMGE5Y2FjNWE2MjJlNDQ4YjVmZmNiNjVlZjQ1Mjc4In19fQ==\"}]}}}"
+                "tag": "{display:{Name:'{\"text\":\"Travel Tent\"}'},SkullOwner:{Id:[I;1,1,1,1],Name:\"%tcamp.camp\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTg0NTlmM2I2NWIyM2NmYThjOWIxNDQzMjViOWJhODE0MDdiZTkzODJjZDg1OTkyZWY5NzljZjBlNzgzZjYifX19\"}]}}}"
               },
               {
                 "function": "minecraft:set_lore",
@@ -26,15 +26,15 @@
                       "color": "gray"
                     },
                     {
-                      "text": "Red",
-                      "color": "#8B2020"
+                      "text": "White",
+                      "color": "#CDD3D4"
                     }
                   ]
                 ]
               },
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{camp:{size:\"small\",colour:\"minecraft:red_dye\",containers:{chests:[[]]}}}"
+                "tag": "{camp:{size:\"small\",colour:\"minecraft:white_dye\",containers:{chests:[[]]}}}"
               }
             ]
           }

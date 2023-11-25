@@ -38,7 +38,7 @@ execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.mar
 execute align xyz positioned ~0.5 ~ ~0.5 run tag @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] add tcamp.marker.campinfo.east
 
 #set colour function
-execute align xyz positioned ~0.5 ~ ~0.5 if data entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.camp{colour:"minecraft:red_dye"} run function tcamp:tent/modify/blocks/colour/size/small/east
+function tcamp:tent/modify/blocks/colour/size/small/east
 
 #remove preview
 #kill preview displays, marker and interaction
