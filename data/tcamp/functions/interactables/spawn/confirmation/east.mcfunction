@@ -9,3 +9,7 @@ summon block_display ~ ~ ~ {Tags:["tcamp.blockdisplay.tent.confirm","tcamp.block
 
 #spawn interaction
 summon interaction ~0.49 ~0.25 ~-0.2 {NoGravity:1b,width:0.5f,height:0.5f,response:1b,Tags:["tcamp.interaction.tent.options.confirm","tcamp.interaction.tent.options","tcamp.interaction.tent","tcamp.interaction","tcamp","tcamp.interaction.east"]}
+
+#effects
+execute positioned ~0.5 ~0.4 ~ run function tcamp:cardinal/effects/sound/general_positive_block
+execute positioned ~0.5 ~0.4 ~ run function tcamp:cardinal/effects/tent/visual/spawn_confirmation

@@ -13,3 +13,6 @@ summon interaction ~1.15 ~0.3 ~0.2 {NoGravity:1b,width:0.35f,height:0.37f,respon
 #dismantling tent
 #has direction tag
 summon interaction ~1.2 ~0.25 ~0.65 {NoGravity:1b,width:0.45f,height:0.45f,response:1b,Tags:["tcamp.interaction.tent.options.dismantle","tcamp.interaction.tent.options","tcamp.interaction.tent","tcamp.interaction","tcamp","tcamp.interaction.south"]}
+
+#effects
+execute positioned ~1 ~0.4 ~0.5 run function tcamp:cardinal/effects/tent/visual/spawn_options

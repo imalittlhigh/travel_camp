@@ -6,7 +6,6 @@
 ##
 
 
-
 #checking if colour matches already and copying the colour to marker data
 execute at @s store result score @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..10] tcamp.dummy run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..10] data.camp.colour set from storage tcamp:item dye.id
 
