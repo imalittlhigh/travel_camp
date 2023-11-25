@@ -5,6 +5,7 @@
  # Created by imalittlhigh.
 ##
 
+data remove entity @s Item.tag.display.Lore
 
 #adds lore of data is stored in tags of contaieners
 execute if data entity @s Item.tag.camp.containers.chests[0].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
@@ -21,10 +22,10 @@ execute if data entity @s Item.tag.camp.containers.chests[0].[9] run data merge 
 
 #add size of tent to item lore
 #small
-execute if data entity @s Item.tag.camp{size:"small"} run data modify entity @s Item.tag.display.Lore append value '{"text":"Size: Small","color":"gray"}'
+execute if data entity @s Item.tag.camp{size:"small"} run data modify entity @s Item.tag.display.Lore append value '{"color":"gray","text":"Size: Small"}'
 
 
 #add colour to item lore
 #red
-execute if data entity @s Item.tag.camp{colour:"red"} run data modify entity @s Item.tag.display.Lore append value '[{"text":"Colour: ","color":"gray"},{"text":"Red","color":"red"}]'
+execute if data entity @s Item.tag.camp{colour:"red"} run data modify entity @s Item.tag.display.Lore append value '{"color":"gray","extra":[{"color":"#8B2020","text":"Red"}],"text":"Colour: "}'
 

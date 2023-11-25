@@ -4,6 +4,7 @@
  #
  # Created by imalittlhigh.
 ##
+
 #this adds one to the distance
 scoreboard players add %tcamp.i tcamp.dummy 1
 

@@ -4,6 +4,8 @@
  #
  # Created by imalittlhigh.
 ##
+
+
 #this adv triggers the raycast from the player
 advancement revoke @s only tcamp:placed_head
 

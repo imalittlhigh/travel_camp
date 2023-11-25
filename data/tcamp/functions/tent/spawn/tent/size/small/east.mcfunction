@@ -17,7 +17,7 @@ setblock ~ ~1 ~ redstone_block replace
 #removeing structure block
 setblock ~ ~ ~ air replace
 #copying data from marker to container chest 0
-execute positioned ~0.5 ~ ~0.5 run data modify block ~1 ~ ~ Items set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest] ArmorItems[3].tag.camp.containers.chests[0]
+execute positioned ~0.5 ~ ~0.5 run data modify block ~1 ~ ~ Items set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest] data.camp.containers.chests[0]
 
 #options
 #summoning item displays for options and interactions
@@ -27,13 +27,13 @@ execute align xyz positioned ~ ~1 ~ run function tcamp:interactables/spawn/optio
 execute align xyz positioned ~0.5 ~ ~0.5 run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Tags:["tcamp","tcamp.marker","tcamp.marker.campinfo","tcamp.marker.campinfo.small"]}
 #savin item stuff to marker
 #Name
-execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.name set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] ArmorItems[3].tag.name
+execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.name set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] data.name
 #name colour
-execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.color set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] ArmorItems[3].tag.color
+execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.color set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] data.color
 #tent colour
-execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.camp.colour set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] ArmorItems[3].tag.camp.colour
+execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.camp.colour set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] data.camp.colour
 #tent size
-execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.camp.size set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] ArmorItems[3].tag.camp.size
+execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.camp.size set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] data.camp.size
 
 
 #set colour function
@@ -43,7 +43,7 @@ execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.mar
 #interaction
 execute positioned ~ ~0.5 ~ run kill @e[tag=tcamp.interaction.tent.setup,limit=1,sort=nearest,distance=..1]
 #axes
-execute positioned ~ ~ ~ run kill @e[tag=tcamp.blockdisplay.tent.setup.pitch,limit=5,sort=nearest,distance=..1]
+execute positioned ~ ~ ~ run kill @e[tag=tcamp.blockdisplay.tent.setup.pitch,limit=7,sort=nearest,distance=..1]
 #marker
 kill @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..1]
 #tent preview

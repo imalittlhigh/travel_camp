@@ -17,7 +17,7 @@ execute as @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_a
 #if player has enough durability on axe, run collision checks
 ##sizes
 #small
-execute if entity @p[limit=1,sort=nearest,distance=..1,tag=tcamp.player.has_sufficient_durability] at @s as @e[tag=tcamp.marker.size.small,distance=..1,limit=1,sort=nearest] at @s run function tcamp:tent/check/collision_small
+execute if entity @p[limit=1,sort=nearest,distance=..1,tag=tcamp.player.has_sufficient_durability] at @s as @e[tag=tcamp.marker.hold_campinfo,distance=..1,limit=1,sort=nearest,nbt={data:{camp:{size:"small"}}}] at @s run function tcamp:tent/check/collision_small
 
 
 #if player doenst have axe equiped, error
