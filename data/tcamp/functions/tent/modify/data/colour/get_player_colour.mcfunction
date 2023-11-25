@@ -22,10 +22,26 @@ execute unless data storage tcamp:item dye{id:"minecraft:light_gray_dye"} run ta
 #checking if not used light_gray
 execute if data storage tcamp:item dye{id:"minecraft:light_gray_dye"} run say you cant use that colour
 
-#if player holds 32+ items, give tag for okay
-execute as @p[limit=1,sort=nearest] if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches 32.. run tag @s add tcamp.player.colour_count.valid
-#if player doenst have enough items in slot
-execute as @p[limit=1,sort=nearest] if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches ..31 run say not enough items in slot
+#saving size to storage
+execute at @s run data modify storage tcamp:tent size set from entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..10] data.camp.size
+
+#if player holds enough items, give tag for okay
+#small
+execute as @p[limit=1,sort=nearest] if data storage tcamp.tent {size:"small"} if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches 16.. run tag @s add tcamp.player.colour_count.valid
+#error if not enough
+execute as @p[limit=1,sort=nearest] if data storage tcamp.tent {size:"small"} if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches ..15 run say not enough items in slot
+#medium
+execute as @p[limit=1,sort=nearest] if data storage tcamp.tent {size:"medium"} if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches 32.. run tag @s add tcamp.player.colour_count.valid
+#error if not enough
+execute as @p[limit=1,sort=nearest] if data storage tcamp.tent {size:"medium"} if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches ..31 run say not enough items in slot
+#large
+execute as @p[limit=1,sort=nearest] if data storage tcamp.tent {size:"large"} if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches 48.. run tag @s add tcamp.player.colour_count.valid
+#error if not enough
+execute as @p[limit=1,sort=nearest] if data storage tcamp.tent {size:"large"} if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches ..47 run say not enough items in slot
+#enourmous
+execute as @p[limit=1,sort=nearest] if data storage tcamp.tent {size:"enourmous"} if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches 64.. run tag @s add tcamp.player.colour_count.valid
+#error if not enough
+execute as @p[limit=1,sort=nearest] if data storage tcamp.tent {size:"enourmous"} if score @s[tag=tcamp.player.valid_colour] tcamp.dummy matches ..63 run say not enough items in slot
 
 #copying to marker (removes items from mainhand in that function)
 execute if entity @p[tag=tcamp.player.colour_count.valid,limit=1,sort=nearest,distance=..2] run function tcamp:tent/modify/data/colour/copy_to_marker
