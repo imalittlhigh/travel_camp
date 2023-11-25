@@ -4,7 +4,6 @@
  #
  # Created by imalittlhigh.
 ##
-say north
 
 
 #fill according to colour data saved in marker

@@ -4,7 +4,6 @@
  #
  # Created by imalittlhigh.
 ##
-say get player colour
 #at player, as interaction
 #summon armorstand to get dye interacted with
 summon armor_stand ~ -100 ~ {NoGravity:1b,Small:1b,Marker:0b,Invisible:1b,Tags:["tcamp","tcamp.marker","tcamp.marker.colour","tcamp.marker.colour.getter"],HandItems:[{id:"minecraft:paper",Count:1b},{}]}
@@ -20,7 +19,7 @@ execute as @p[limit=1,sort=nearest] positioned ~ -100 ~ run kill @e[tag=tcamp.ma
 #checking if not used light_gray
 execute unless data storage tcamp:item dye{id:"minecraft:light_gray_dye"} run tag @p[limit=1,sort=nearest] add tcamp.player.valid_colour
 #checking if not used light_gray
-execute if data storage tcamp:item dye{id:"minecraft:light_gray_dye"} run say you cant use that colour
+execute if data storage tcamp:item dye{id:"minecraft:light_gray_dye"} run function tcamp:cardinal/effects/sound/general_error
 
 #saving size to storage
 execute at @s run data modify storage tcamp:tent size set from entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..10] data.camp.size

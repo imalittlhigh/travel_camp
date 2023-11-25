@@ -12,7 +12,7 @@ execute if entity @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/ho
 tag @a remove tcamp.interaction.marked
 
 #if player doesnt have enough dura, error
-execute as @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_axe,tag=!tcamp.player.has_sufficient_durability] run say u dont have the dura on ur axe
+execute as @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_axe,tag=!tcamp.player.has_sufficient_durability] at @s run function tcamp:cardinal/effects/sound/durability_error
 
 #if player has enough durability on axe, run collision checks
 ##sizes
@@ -21,4 +21,4 @@ execute if entity @p[limit=1,sort=nearest,distance=..1,tag=tcamp.player.has_suff
 
 
 #if player doenst have axe equiped, error
-execute as @p[limit=1,sort=nearest,distance=..1,predicate=!tcamp:player/holding_axe] run say axe in main hand pls
+execute as @p[limit=1,sort=nearest,distance=..1,predicate=!tcamp:player/holding_axe] at @s run function tcamp:cardinal/effects/sound/equip_axe

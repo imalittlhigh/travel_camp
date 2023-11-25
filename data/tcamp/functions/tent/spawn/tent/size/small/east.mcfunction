@@ -5,8 +5,9 @@
  # Created by imalittlhigh.
 ##
 #as player at interaction
-say place east
 
+#effects
+function tcamp:cardinal/effects/tent/effects/success_place
 #removing dura from axe of player - is already adjusted with unbreaking
 execute at @s as @a[tag=tcamp.player.has_sufficient_durability] run function tcamp:cardinal/damage_tool/add_damage
 

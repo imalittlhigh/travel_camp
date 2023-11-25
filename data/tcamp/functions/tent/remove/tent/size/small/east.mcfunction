@@ -4,7 +4,6 @@
  #
  # Created by imalittlhigh.
 ##
-say remove east
 
 
 #saving container info to armorstand head item
@@ -12,6 +11,9 @@ data modify entity @s data.camp.containers.chests append from block ~1 ~ ~ Items
 
 #clearing copied containers
 data remove block ~1 ~ ~ Items
+
+#effects
+function tcamp:cardinal/effects/tent/effects/remove_tent
 
 #spawning head item
 loot spawn ~ ~0.5 ~ loot tcamp:heads/tents/small/blank

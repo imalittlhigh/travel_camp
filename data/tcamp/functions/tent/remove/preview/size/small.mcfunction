@@ -5,11 +5,13 @@
  # Created by imalittlhigh.
 ##
 
-#add effects for removal
 
 #spawn head item
 #colour:
 loot spawn ~ ~0.5 ~ loot tcamp:heads/tents/small/blank
+
+#effects
+function tcamp:cardinal/effects/tent/effects/remove_preview
 
 #mark head item
 tag @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest] add tcamp.item.modify
