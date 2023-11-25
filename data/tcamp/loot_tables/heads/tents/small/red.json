@@ -34,7 +34,7 @@
               },
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{camp:{size:\"small\",colour:\"red\",containers:{chests:[[]]}}}"
+                "tag": "{camp:{size:\"small\",colour:\"minecraft:red_dye\",containers:{chests:[[]]}}}"
               }
             ]
           }

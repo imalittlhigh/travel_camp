@@ -18,14 +18,14 @@ execute as @p positioned ~ -100 ~ run data modify storage tcamp:item dye.id set 
 execute as @p positioned ~ -100 ~ run kill @e[tag=tcamp.marker.colour.getter,limit=1,sort=nearest,distance=..1]
 #if player holds 32+ items, give tag for okay
 execute as @p if score @s tcamp.dummy matches 32.. run tag @s add tcamp.player.colour_count.valid
-#removing items from palyer mainhand
-execute as @p run item modify entity @s weapon.mainhand tcamp:remove_count
+#if player doenst have enough items in slot
+execute as @p if score @s tcamp.dummy matches ..31 run say not enough items in slot
 
-#copying to marker
+#copying to marker (removes items from mainhand in that function)
 execute if entity @p[tag=tcamp.player.colour_count.valid,limit=1,sort=nearest,distance=..2] run function tcamp:tent/modify/data/colour/copy_to_marker
 
 
-#resetting tcamp score for player
-execute as @p run scoreboard players reset @s tcamp.dummy
+
+
 #remving item count tag
-tag @p remove tcamp.player.colour_count.valid
+tag @a remove tcamp.player.colour_count.valid

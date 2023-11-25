@@ -15,7 +15,7 @@ data remove block ~ ~ ~1 Items
 
 #spawning head item according to colour
 #red
-execute if data entity @s data.camp{colour:"red"} run loot spawn ~ ~0.5 ~ loot tcamp:heads/tents/small/red
+execute if data entity @s data.camp{colour:"minecraft:red_dye"} run loot spawn ~ ~0.5 ~ loot tcamp:heads/tents/small/red
 
 #mark head items
 tag @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest] add tcamp.item.modify

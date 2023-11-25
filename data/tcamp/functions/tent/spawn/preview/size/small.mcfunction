@@ -14,7 +14,7 @@ summon block_display ~-0.5 ~ ~-0.5 {Tags:["tcamp.blockdisplay.tent.setup.pitch",
 
 #test what type of camp item it is id[0] = type, id[1] = size, id[2] = colour
 #red
-#execute if data entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest] data.camp{colour:"red"} run tag @e[tag=tcamp.marker.hold_campinfo,distance=..1,sort=nearest,limit=1] add tcamp.marker.clour.red
+#execute if data entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest] data.camp{colour:"minecraft:red_dye"} run tag @e[tag=tcamp.marker.hold_campinfo,distance=..1,sort=nearest,limit=1] add tcamp.marker.clour.red
 
 #rotation
 function tcamp:cardinal/preview/get_head_rotation

@@ -9,7 +9,7 @@
 
 #spawn head item
 #colour:
-execute as @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..1,nbt={data:{camp:{colour:"red"}}}] at @s run loot spawn ~ ~0.5 ~ loot tcamp:heads/tents/small/red
+execute as @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..1,nbt={data:{camp:{colour:"minecraft:red_dye"}}}] at @s run loot spawn ~ ~0.5 ~ loot tcamp:heads/tents/small/red
 
 #mark head item
 tag @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest] add tcamp.item.modify

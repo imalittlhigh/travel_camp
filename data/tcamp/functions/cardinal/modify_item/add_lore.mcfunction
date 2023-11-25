@@ -27,5 +27,5 @@ execute if data entity @s Item.tag.camp{size:"small"} run data modify entity @s 
 
 #add colour to item lore
 #red
-execute if data entity @s Item.tag.camp{colour:"red"} run data modify entity @s Item.tag.display.Lore append value '{"color":"gray","extra":[{"color":"#8B2020","text":"Red"}],"text":"Colour: "}'
+execute if data entity @s Item.tag.camp{colour:"minecraft:red_dye"} run data modify entity @s Item.tag.display.Lore append value '{"color":"gray","extra":[{"color":"#8B2020","text":"Red"}],"text":"Colour: "}'
 

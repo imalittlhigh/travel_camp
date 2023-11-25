@@ -35,7 +35,8 @@ execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.mar
 execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.camp.colour set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] data.camp.colour
 #tent size
 execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.camp.size set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] data.camp.size
-
+#tent direction
+execute align xyz positioned ~0.5 ~ ~0.5 run tag @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] add tcamp.marker.campinfo.north
 
 #set colour function
 

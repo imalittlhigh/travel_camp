@@ -31,7 +31,8 @@ execute at @s positioned ~ -100 ~ if data entity @e[tag=tcamp.marker.durability.
 execute at @s positioned ~ -100 ~ run kill @e[tag=tcamp.marker.durability.getter,limit=1,sort=nearest,distance=..1]
 
 #Setting damage the tool should recieve depending on the tent size
-execute if entity @e[tag=tcamp.marker.size.small,distance=..1,sort=nearest,limit=1] run scoreboard players set %tcamp.damage_remove tcamp.dummy 15
+#small
+execute if entity @e[tag=tcamp.marker.hold_campinfo,distance=..1,sort=nearest,limit=1,nbt={data:{camp:{size:"small"}}}] run scoreboard players set %tcamp.damage_remove tcamp.dummy 15
 
 #adjusting used damage by unbreaking
 execute if predicate tcamp:player/enchantments/mainhand/unbreakingi run scoreboard players operation %tcamp.damage_remove tcamp.dummy /= %tcamp.unbreakingi tcamp.dummy

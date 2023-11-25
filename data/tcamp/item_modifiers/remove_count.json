@@ -1,12 +1,7 @@
 [
-    {
-      "function": "minecraft:set_count",
-      "count": {
-        "type": "minecraft:score",
-        "target": "this",
-        "score": "tcamp.dummy"
-      },
-      "add": true
-    }
-  ]
-  
+  {
+    "function": "minecraft:set_count",
+    "count": -32,
+    "add": true
+  }
+]
