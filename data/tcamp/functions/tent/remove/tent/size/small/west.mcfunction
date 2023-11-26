@@ -37,8 +37,6 @@ execute as @s[tag=tcamp.marker.campinfo.intact] as @e[tag=tcamp.item.modify] at 
 #unmark head item
 execute as @s[tag=tcamp.marker.campinfo.intact] run tag @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest] remove tcamp.item.modify
 
-#remove bedroll
-execute as @s[tag=tcamp.marker.campinfo.intact] positioned ~0.5 ~ ~0.5 run function pbroll_camp:remove/roll/east
 
 #replace structure with air
 execute as @s[tag=tcamp.marker.campinfo.intact] run setblock ~ ~ ~ structure_block[mode=load]{name:"tcamp:tent_empty/small/tent_small_west",posX:-2,posY:0,posZ:-1,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:1b} replace
@@ -46,10 +44,6 @@ execute as @s[tag=tcamp.marker.campinfo.intact] run setblock ~ ~1 ~ redstone_blo
 execute as @s[tag=tcamp.marker.campinfo.intact] run setblock ~ ~1 ~ air
 execute as @s[tag=tcamp.marker.campinfo.intact] run setblock ~ ~ ~ air
 
-#remove repair display if there
-execute as @s[tag=tcamp.marker.campinfo.intact] at @s positioned ~ ~0.5 ~ run kill @e[tag=tcamp.blockdisplay.tent.repair,distance=..1,limit=3,sort=nearest]
 
-#remove interaction confirmation
-execute as @s[tag=tcamp.marker.campinfo.intact] align xyz positioned ~ ~1 ~ run function tcamp:interactables/remove/confirmation/west
-
-execute as @s[tag=tcamp.marker.campinfo.intact] run kill @s
+#remove entities
+execute as @s[tag=tcamp.marker.campinfo.intact] run function tcamp:tent/remove/entities/size/small/west

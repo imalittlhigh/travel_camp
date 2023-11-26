@@ -25,5 +25,8 @@ execute as @e[tag=tcamp.marker.campinfo,tag=!tcamp.marker.campinfo.intact,tag=!t
 #remove item display if tent is intact
 execute as @e[tag=tcamp.marker.campinfo,tag=tcamp.marker.campinfo.intact,tag=tcamp.marker.campinfo.intact.displayed] at @s positioned ~ ~0.5 ~ run function tcamp:tent/check/intact_visual/remove_display
 
+#remove tent entities if not repaired within 120 seconds
+execute as @e[tag=tcamp.blockdisplay.tent.repair.main,scores={tcamp.dummy=120..}] at @s as @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..2] at @s run function tcamp:tent/remove/entities/main
+scoreboard players add @e[tag=tcamp.blockdisplay.tent.repair.main] tcamp.dummy 5
 
 schedule function tcamp:meta/10tick 10t replace
