@@ -1,0 +1,259 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 1,
+        "offsetY": 0,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "blocks": ["minecraft:barrel"]
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 1,
+        "offsetY": 0,
+        "offsetZ": 1,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_fences"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 1,
+        "offsetY": 0,
+        "offsetZ": -1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 2,
+        "offsetY": 0,
+        "offsetZ": -1,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_trapdoors"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 0,
+        "offsetY": 0,
+        "offsetZ": -1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 0,
+        "offsetY": 0,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/bed"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": -1,
+        "offsetY": 0,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/bed"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": -1,
+        "offsetY": 0,
+        "offsetZ": -1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": -2,
+        "offsetY": 0,
+        "offsetZ": -1,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_trapdoors"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 1,
+        "offsetY": 1,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_slabs"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 1,
+        "offsetY": 1,
+        "offsetZ": 1,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_fences"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 1,
+        "offsetY": 1,
+        "offsetZ": -1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 0,
+        "offsetY": 1,
+        "offsetZ": -1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": -1,
+        "offsetY": 1,
+        "offsetZ": -1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": -1,
+        "offsetY": 1,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_slabs"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": -1,
+        "offsetY": 1,
+        "offsetZ": 1,
+        "predicate": {
+          "block": {
+            "blocks": ["minecraft:lantern"]
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 0,
+        "offsetY": 1,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_trapdoors"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 0,
+        "offsetY": 2,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 1,
+        "offsetY": 2,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_slabs"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": -1,
+        "offsetY": 2,
+        "offsetZ": 0,
+        "predicate": {
+          "block": {
+            "tag": "minecraft:wooden_slabs"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 0,
+        "offsetY": 2,
+        "offsetZ": 1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": 1,
+        "offsetY": 2,
+        "offsetZ": 1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetX": -1,
+        "offsetY": 2,
+        "offsetZ": 1,
+        "predicate": {
+          "block": {
+            "tag": "tcamp:tent_blocks/wall"
+          }
+        }
+      }
+    ]
+  }
+  

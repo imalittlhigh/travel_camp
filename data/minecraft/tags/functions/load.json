@@ -2,7 +2,8 @@
     "values": [
         "tcamp:meta/load",
         "ccraft:meta/load",
-        "pbroll:meta/load",
-        "tcamp:meta/10tick"
+        "pbroll_camp:meta/load",
+        "tcamp:meta/10tick",
+        "tcamp:meta/40tick"
     ]
     }
