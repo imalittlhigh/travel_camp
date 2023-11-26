@@ -6,7 +6,6 @@
 ##
 data remove entity @s interaction
 
-
 execute as @s[tag=pbroll_camp.interaction.bedroll.west.head,tag=!pbroll.interaction.hassleeper] at @s run function pbroll_camp:use/sleep/west
 execute as @s[tag=pbroll_camp.interaction.bedroll.east.head,tag=!pbroll.interaction.hassleeper] at @s run function pbroll_camp:use/sleep/east
 execute as @s[tag=pbroll_camp.interaction.bedroll.north.head,tag=!pbroll.interaction.hassleeper] at @s run function pbroll_camp:use/sleep/north

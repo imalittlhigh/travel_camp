@@ -6,6 +6,7 @@
 ##
 
 #check if blocks still intact
+tag @s remove tcamp.marker.campinfo.intact
 execute if predicate tcamp:intact/tents/small/east run tag @s add tcamp.marker.campinfo.intact
 
 #error if not intact
@@ -45,6 +46,9 @@ execute as @s[tag=tcamp.marker.campinfo.intact] run setblock ~ ~ ~ structure_blo
 execute as @s[tag=tcamp.marker.campinfo.intact] run setblock ~ ~1 ~ redstone_block
 execute as @s[tag=tcamp.marker.campinfo.intact] run setblock ~ ~1 ~ air
 execute as @s[tag=tcamp.marker.campinfo.intact] run setblock ~ ~ ~ air
+
+#remove repair display if there
+execute as @s[tag=tcamp.marker.campinfo.intact] at @s positioned ~ ~0.5 ~ run kill @e[tag=tcamp.blockdisplay.tent.repair,distance=..1,limit=3,sort=nearest]
 
 #remove interaction confirmation
 execute as @s[tag=tcamp.marker.campinfo.intact] align xyz positioned ~ ~1 ~ run function tcamp:interactables/remove/confirmation/east

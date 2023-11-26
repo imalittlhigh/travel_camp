@@ -6,6 +6,7 @@
 ##
 ##executed as player
 effect clear @s minecraft:darkness
+effect clear @s minecraft:slowness
 
 scoreboard players reset @s pbroll_camp.left 
 

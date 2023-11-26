@@ -7,6 +7,7 @@
 tp @a[tag=pbroll_camp.player.interacted,limit=1,sort=nearest] ~ ~ ~-0.1
 
 effect give @a[tag=pbroll_camp.player.interacted,limit=1,sort=nearest] minecraft:darkness infinite 9 true
+effect give @a[tag=pbroll_camp.player.interacted,limit=1,sort=nearest] minecraft:slowness infinite 9 true
 
 tag @a[tag=pbroll_camp.player.interacted,limit=1,sort=nearest] add pbroll.player.sleeping
 

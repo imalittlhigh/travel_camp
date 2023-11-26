@@ -17,3 +17,5 @@ execute as @s[tag=tcamp.interaction.north] positioned ~1 ~ ~ run function tcamp:
 #south
 execute as @s[tag=tcamp.interaction.south] positioned ~-1 ~ ~ run function tcamp:interactables/spawn/options/south
 execute as @s[tag=tcamp.interaction.south] positioned ~-1 ~ ~ run function tcamp:interactables/remove/confirmation/south
+
+function tcamp:cardinal/effects/sound/general_positive_block
