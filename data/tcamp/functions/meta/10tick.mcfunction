@@ -6,7 +6,7 @@
 ##
 
 #remove preview after 60 secs, so it doesnt just clutter up stuff
-#execute as @e[type=interaction,tag=tcamp.interaction.tent.setup,scores={tcamp.dummy=600..}] at @s run function tcamp:remove/preview/main
+execute as @e[type=interaction,tag=tcamp.interaction.tent.setup,scores={tcamp.dummy=600..}] at @s run function tcamp:tent/remove/preview/main
 #display particles if only 10 secs left before removal
 execute as @e[type=interaction,tag=tcamp.interaction.tent.setup,scores={tcamp.dummy=500..}] at @s run particle cloud ~ ~0.2 ~ 0.1 0.1 0.1 0.001 1 normal
 
@@ -26,7 +26,10 @@ execute as @e[tag=tcamp.marker.campinfo,tag=!tcamp.marker.campinfo.intact,tag=!t
 execute as @e[tag=tcamp.marker.campinfo,tag=tcamp.marker.campinfo.intact,tag=tcamp.marker.campinfo.intact.displayed] at @s positioned ~ ~0.5 ~ run function tcamp:tent/check/intact_visual/remove_display
 
 #remove tent entities if not repaired within 120 seconds
-execute as @e[tag=tcamp.blockdisplay.tent.repair.main,scores={tcamp.dummy=120..}] at @s as @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..2] at @s run function tcamp:tent/remove/entities/main
+execute as @e[tag=tcamp.blockdisplay.tent.repair.main,scores={tcamp.dummy=1200..}] at @s as @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..2] at @s run function tcamp:tent/remove/entities/main
+#effects
+execute as @e[tag=tcamp.blockdisplay.tent.repair.main,scores={tcamp.dummy=900..}] at @s run particle cloud ~ ~0.2 ~ 0.1 0.1 0.1 0.001 1 normal
+#increase timer
 scoreboard players add @e[tag=tcamp.blockdisplay.tent.repair.main] tcamp.dummy 5
 
 schedule function tcamp:meta/10tick 10t replace
