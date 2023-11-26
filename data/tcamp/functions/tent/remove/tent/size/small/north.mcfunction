@@ -11,9 +11,10 @@ execute if predicate tcamp:intact/tents/small/north run tag @s add tcamp.marker.
 
 #error if not intact
 execute as @s[tag=!tcamp.marker.campinfo.intact] run say not intact
-
+#setting up data structure
+execute as @s[tag=tcamp.marker.campinfo.intact] run data modify entity @s data.camp.containers.chests set value [[]]
 #saving container info to armorstand head item
-execute as @s[tag=tcamp.marker.campinfo.intact] run data modify entity @s data.camp.containers.chests append from block ~ ~ ~-1 Items
+execute as @s[tag=tcamp.marker.campinfo.intact] run data modify entity @s data.camp.containers.chests[0] set from block ~ ~ ~-1 Items
 
 #clearing copied containers
 execute as @s[tag=tcamp.marker.campinfo.intact] run data remove block ~ ~ ~-1 Items

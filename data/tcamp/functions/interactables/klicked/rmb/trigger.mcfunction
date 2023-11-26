@@ -22,6 +22,18 @@ execute as @s[tag=tcamp.interaction.tent.options.confirm,tag=tcamp.interaction.e
 execute as @s[tag=tcamp.interaction.tent.options.confirm,tag=tcamp.interaction.north] if entity @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_axe] at @s align xyz positioned ~1.5 ~-1 ~0.5 as @e[tag=tcamp.marker.campinfo.small,limit=1,sort=nearest,distance=..1] at @s align xyz positioned ~ ~ ~ run function tcamp:tent/remove/tent/size/small/north
 #south
 execute as @s[tag=tcamp.interaction.tent.options.confirm,tag=tcamp.interaction.south] if entity @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_axe] at @s align xyz positioned ~-0.5 ~-1 ~0.5 as @e[tag=tcamp.marker.campinfo.small,limit=1,sort=nearest,distance=..1] at @s align xyz positioned ~ ~ ~ run function tcamp:tent/remove/tent/size/small/south
+#medium
+#west
+execute as @s[tag=tcamp.interaction.tent.options.confirm,tag=tcamp.interaction.west] if entity @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_axe] at @s align xyz positioned ~0.5 ~-1 ~-1.5 as @e[tag=tcamp.marker.campinfo.medium,limit=1,sort=nearest,distance=..1] at @s align xyz positioned ~ ~ ~ run function tcamp:tent/remove/tent/size/medium/west
+#east
+execute as @s[tag=tcamp.interaction.tent.options.confirm,tag=tcamp.interaction.east] if entity @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_axe] at @s align xyz positioned ~0.5 ~-1 ~2.5 as @e[tag=tcamp.marker.campinfo.medium,limit=1,sort=nearest,distance=..1] at @s align xyz positioned ~ ~ ~ run function tcamp:tent/remove/tent/size/medium/east
+#north
+execute as @s[tag=tcamp.interaction.tent.options.confirm,tag=tcamp.interaction.north] if entity @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_axe] at @s align xyz positioned ~2.5 ~-1 ~0.5 as @e[tag=tcamp.marker.campinfo.medium,limit=1,sort=nearest,distance=..1] at @s align xyz positioned ~ ~ ~ run function tcamp:tent/remove/tent/size/medium/north
+#south
+execute as @s[tag=tcamp.interaction.tent.options.confirm,tag=tcamp.interaction.south] if entity @p[limit=1,sort=nearest,distance=..1,predicate=tcamp:player/holding_axe] at @s align xyz positioned ~-1.5 ~-1 ~0.5 as @e[tag=tcamp.marker.campinfo.medium,limit=1,sort=nearest,distance=..1] at @s align xyz positioned ~ ~ ~ run function tcamp:tent/remove/tent/size/medium/south
+
+
+
 
 #spawning tent
 execute as @s[tag=tcamp.interaction.tent.setup] at @p[limit=1,sort=nearest,distance=..1] run function tcamp:tent/spawn/tent/main

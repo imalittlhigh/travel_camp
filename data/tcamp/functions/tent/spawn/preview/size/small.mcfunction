@@ -4,8 +4,6 @@
  #
  # Created by imalittlhigh.
 ##
-#sound and visual effecs
-#saddle equip
 
 
 #spawn interaction with iron axe displays for pitching

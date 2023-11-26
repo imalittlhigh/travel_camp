@@ -17,3 +17,15 @@ execute as @s[tag=tcamp.marker.campinfo.small,tag=tcamp.marker.campinfo.north] i
 #south
 execute as @s[tag=tcamp.marker.campinfo.small,tag=tcamp.marker.campinfo.south] if predicate tcamp:intact/tents/small/south run tag @s add tcamp.marker.campinfo.intact
 
+#medium
+#east
+execute as @s[tag=tcamp.marker.campinfo.medium,tag=tcamp.marker.campinfo.east] if predicate tcamp:intact/tents/medium/east run tag @s add tcamp.marker.campinfo.intact
+#west
+execute as @s[tag=tcamp.marker.campinfo.medium,tag=tcamp.marker.campinfo.west] if predicate tcamp:intact/tents/medium/west run tag @s add tcamp.marker.campinfo.intact
+#north
+execute as @s[tag=tcamp.marker.campinfo.medium,tag=tcamp.marker.campinfo.north] if predicate tcamp:intact/tents/medium/north run tag @s add tcamp.marker.campinfo.intact
+#south
+execute as @s[tag=tcamp.marker.campinfo.medium,tag=tcamp.marker.campinfo.south] if predicate tcamp:intact/tents/medium/south run tag @s add tcamp.marker.campinfo.intact
+
+##temp
+tag @s[tag=tcamp.marker.campinfo.medium] add tcamp.marker.campinfo.intact

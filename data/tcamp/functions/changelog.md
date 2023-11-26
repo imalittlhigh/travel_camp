@@ -16,7 +16,8 @@ check if tent is in block already
 
 
 
-
-
+Tags:["tcamp.blockdisplay.tent.preview","tcamp.blockdisplay.tent","tcamp.blockdisplay","tcamp"],
+{id:"minecraft:block_display",block_state
+{Tags:["tcamp.blockdisplay.tent.preview","tcamp.blockdisplay.tent","tcamp.blockdisplay","tcamp"],Glowing:1b,id:"minecraft:block_display",block_state
 
 

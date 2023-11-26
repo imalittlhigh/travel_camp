@@ -23,6 +23,8 @@ tag @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest,distance=..1
 execute at @s run kill @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest]
 
 ##camp tents
-#test what type of camp item it is id[1] = type, id[2] = size, id[3] = colour
+#test what type of camp item it is
 execute if data entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..1] data.camp{size:"small"} run function tcamp:tent/spawn/preview/size/small
+execute if data entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..1] data.camp{size:"medium"} run function tcamp:tent/spawn/preview/size/medium
+
 

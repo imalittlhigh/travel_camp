@@ -12,20 +12,23 @@ function tcamp:cardinal/effects/tent/effects/success_place
 execute at @s as @a[tag=tcamp.player.has_sufficient_durability] run function tcamp:cardinal/damage_tool/add_damage
 
 #setting structure
-setblock ~ ~ ~ structure_block[mode=load]{name:"tcamp:tent/small/tent_small_west",posX:-2,posY:0,posZ:-1,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:1b} replace
+setblock ~ ~ ~ structure_block[mode=load]{name:"tcamp:tent/medium/tent_medium_west",posX:-3,posY:0,posZ:-3,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:1b} replace
 #triggering structure block
 setblock ~ ~1 ~ redstone_block replace
 #removeing structure block
 setblock ~ ~ ~ air replace
-#copying data from marker to container chest 0
-execute positioned ~0.5 ~ ~0.5 run data modify block ~-1 ~ ~ Items set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest] data.camp.containers.chests[0]
-
+#removeing redstone block
+setblock ~ ~1 ~ air replace
+#copying data from marker to container
+execute positioned ~0.5 ~ ~0.5 run data modify block ~ ~1 ~-1 Items set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest] data.camp.containers.chests[0]
+execute positioned ~0.5 ~ ~0.5 run data modify block ~1 ~ ~-1 Items set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest] data.camp.containers.chests[1]
+execute positioned ~0.5 ~ ~0.5 run data modify block ~-1 ~ ~-1 Items set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest] data.camp.containers.furnace[0]
 #options
 #summoning item displays for options and interactions
-execute align xyz positioned ~ ~1 ~ run function tcamp:interactables/spawn/options/west
+execute align xyz positioned ~ ~1 ~1 run function tcamp:interactables/spawn/options/west
 
 #summoning marker to save size and direction and colour
-execute align xyz positioned ~0.5 ~ ~0.5 run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Tags:["tcamp","tcamp.marker","tcamp.marker.campinfo","tcamp.marker.campinfo.small","tcamp.marker.campinfo.intact"]}
+execute align xyz positioned ~0.5 ~ ~0.5 run summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Tags:["tcamp","tcamp.marker","tcamp.marker.campinfo","tcamp.marker.campinfo.medium","tcamp.marker.campinfo.intact"]}
 #savin item stuff to marker
 #Name
 execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] data.name set from entity @e[tag=tcamp.marker.hold_campinfo,limit=1,sort=nearest,distance=..2] data.name
@@ -39,10 +42,10 @@ execute align xyz positioned ~0.5 ~ ~0.5 run data modify entity @e[tag=tcamp.mar
 execute align xyz positioned ~0.5 ~ ~0.5 run tag @e[tag=tcamp.marker.campinfo,limit=1,sort=nearest,distance=..1] add tcamp.marker.campinfo.west
 
 #set colour function
-function tcamp:tent/modify/blocks/colour/size/small/west
+function tcamp:tent/modify/blocks/colour/size/medium/west
 
 #spawn bedroll
-execute positioned ~0.5 ~ ~0.5 run function pbroll_camp:place/roll/east
+execute positioned ~-0.5 ~ ~1.5 run function pbroll_camp:place/roll/east
 
 #remove preview
 #kill preview displays, marker and interaction

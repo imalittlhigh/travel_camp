@@ -13,3 +13,5 @@ data remove entity @s attack
 #remove tent preview
 #small
 execute as @s[tag=tcamp.interaction,tag=tcamp.interaction.tent.setup.small] at @s run function tcamp:tent/remove/preview/size/small
+#medium
+execute as @s[tag=tcamp.interaction,tag=tcamp.interaction.tent.setup.medium] at @s run function tcamp:tent/remove/preview/size/medium

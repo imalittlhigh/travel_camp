@@ -9,16 +9,17 @@ data remove entity @s Item.tag.display.Lore
 
 #adds lore of data is stored in tags of contaieners
 execute if data entity @s Item.tag.camp.containers.chests[0].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[1] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[2] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[3] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[4] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[5] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[6] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[7] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[8] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
-execute if data entity @s Item.tag.camp.containers.chests[0].[9] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[1].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[2].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[3].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[4].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[5].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[6].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[7].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[8].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
+execute if data entity @s Item.tag.camp.containers.chests[9].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
 
+execute if data entity @s Item.tag.camp.containers.furnace[0].[] run data merge entity @s {Item:{tag:{display:{Lore:['{"text":"Has items stored","color":"gray"}']}}}}
 
 #add size of tent to item lore
 #small
