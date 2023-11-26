@@ -30,6 +30,8 @@ execute as @e[tag=tcamp.item.modify] at @s run function tcamp:cardinal/modify_it
 #unmark head item
 tag @e[type=item,nbt={Item:{tag:{SkullOwner:{Name:"%tcamp.camp"}}}},limit=1,sort=nearest] remove tcamp.item.modify
 
+#remove bedroll
+execute positioned ~0.5 ~ ~0.5 run function pbroll_camp:remove/roll/south
 
 #replace structure with air
 setblock ~ ~ ~ structure_block[mode=load]{name:"tcamp:tent_empty/small/tent_small_north",posX:-1,posY:0,posZ:-2,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:1b} replace

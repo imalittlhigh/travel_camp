@@ -41,6 +41,9 @@ execute align xyz positioned ~0.5 ~ ~0.5 run tag @e[tag=tcamp.marker.campinfo,li
 #set colour function
 function tcamp:tent/modify/blocks/colour/size/small/north
 
+#spawn bedroll
+execute positioned ~0.5 ~ ~0.5 run function pbroll_camp:place/roll/south
+
 #remove preview
 #kill preview displays, marker and interaction
 #interaction
