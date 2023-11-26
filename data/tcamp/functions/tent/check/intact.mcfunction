@@ -26,6 +26,3 @@ execute as @s[tag=tcamp.marker.campinfo.medium,tag=tcamp.marker.campinfo.west] i
 execute as @s[tag=tcamp.marker.campinfo.medium,tag=tcamp.marker.campinfo.north] if predicate tcamp:intact/tents/medium/north run tag @s add tcamp.marker.campinfo.intact
 #south
 execute as @s[tag=tcamp.marker.campinfo.medium,tag=tcamp.marker.campinfo.south] if predicate tcamp:intact/tents/medium/south run tag @s add tcamp.marker.campinfo.intact
-
-##temp
-tag @s[tag=tcamp.marker.campinfo.medium] add tcamp.marker.campinfo.intact
