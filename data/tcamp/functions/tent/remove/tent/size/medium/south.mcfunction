@@ -8,7 +8,7 @@
 
 #check if blocks still intact
 tag @s remove tcamp.marker.campinfo.intact
-execute if predicate tcamp:intact/tents/medium/east run tag @s add tcamp.marker.campinfo.intact
+execute if predicate tcamp:intact/tents/medium/south run tag @s add tcamp.marker.campinfo.intact
 
 #error if not intact
 execute as @s[tag=!tcamp.marker.campinfo.intact] run say not intact

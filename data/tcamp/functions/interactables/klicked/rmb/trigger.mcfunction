@@ -67,3 +67,4 @@ execute as @s[tag=tcamp.interaction.tent.options.dye] if entity @p[limit=1,sort=
 execute as @s[tag=tcamp.interaction.tent.options.dye] if entity @p[limit=1,sort=nearest,distance=..1,predicate=!tcamp:player/holding_dye] run say need holding dye
 
 
+data remove entity @s[tag=tcamp.interaction,nbt={interaction:{}}] interaction

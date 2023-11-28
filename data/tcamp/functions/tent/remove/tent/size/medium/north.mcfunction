@@ -7,7 +7,7 @@
 
 #check if blocks still intact
 tag @s remove tcamp.marker.campinfo.intact
-execute if predicate tcamp:intact/tents/medium/east run tag @s add tcamp.marker.campinfo.intact
+execute if predicate tcamp:intact/tents/medium/north run tag @s add tcamp.marker.campinfo.intact
 
 #error if not intact
 execute as @s[tag=!tcamp.marker.campinfo.intact] run say not intact
@@ -25,7 +25,7 @@ execute as @s[tag=tcamp.marker.campinfo.intact] run data remove block ~1 ~ ~1 It
 execute as @s[tag=tcamp.marker.campinfo.intact] run data remove block ~1 ~ ~-1 Items
 
 #effects
-function tcamp:cardinal/effects/tent/effects/remove_tent
+execute as @s[tag=tcamp.marker.campinfo.intact] run function tcamp:cardinal/effects/tent/effects/remove_tent
 #spawning head item
 execute as @s[tag=tcamp.marker.campinfo.intact] run loot spawn ~ ~0.5 ~ loot tcamp:heads/tents/medium/blank
 

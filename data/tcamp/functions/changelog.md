@@ -13,7 +13,7 @@ small tent blocks: 15
 unbreaking: 50,66,75% of not using dura
 
 check if tent is in block already
-
+next is colour for medium tents with the fill functions
 
 
 Tags:["tcamp.blockdisplay.tent.preview","tcamp.blockdisplay.tent","tcamp.blockdisplay","tcamp"],

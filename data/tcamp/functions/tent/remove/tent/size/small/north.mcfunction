@@ -19,7 +19,7 @@ execute as @s[tag=tcamp.marker.campinfo.intact] run data modify entity @s data.c
 #clearing copied containers
 execute as @s[tag=tcamp.marker.campinfo.intact] run data remove block ~ ~ ~-1 Items
 #effects
-function tcamp:cardinal/effects/tent/effects/remove_tent
+execute as @s[tag=tcamp.marker.campinfo.intact] run function tcamp:cardinal/effects/tent/effects/remove_tent
 #spawning head item
 execute as @s[tag=tcamp.marker.campinfo.intact] run loot spawn ~ ~0.5 ~ loot tcamp:heads/tents/small/blank
 
