@@ -12,15 +12,15 @@ scoreboard players set %tcamp.i tcamp.dummy 100
 summon marker ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Tags:["tcamp","tcamp.marker","tcamp.marker.hold_campinfo","tcamp.marker.hold_campinfo.set_info"]}
 
 #copying the camp info from item to marker
-data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest,distance=..1] data.camp set from entity @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest] Item.tag.camp
+data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest,distance=..1] data.camp set from entity @e[tag=tcamp.marker.copy_campinfo,limit=1,sort=nearest] data.camp
 #copying name of item to marker
-data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest,distance=..1] data.name set from entity @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest] Item.tag.name
-data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest,distance=..1] data.colour set from entity @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest] Item.tag.color
+data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest,distance=..1] data.name set from entity @e[tag=tcamp.marker.copy_campinfo,limit=1,sort=nearest] data.name
+data modify entity @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest,distance=..1] data.colour set from entity @e[tag=tcamp.marker.copy_campinfo,limit=1,sort=nearest] data.color
 
 #removing set_info tag from armorstand
 tag @e[tag=tcamp.marker.hold_campinfo.set_info,limit=1,sort=nearest,distance=..1] remove tcamp.marker.hold_campinfo.set_info
 #removing the temp item
-execute at @s run kill @e[tag=tcamp.item.copy_campinfo,limit=1,sort=nearest]
+execute at @s run kill @e[tag=tcamp.marker.copy_campinfo,limit=1,sort=nearest]
 
 ##camp tents
 #test what type of camp item it is

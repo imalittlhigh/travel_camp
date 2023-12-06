@@ -61,10 +61,10 @@ execute as @s[tag=tcamp.interaction.tent.options.dismantle,tag=tcamp.interaction
 #remove self
 execute as @s[tag=tcamp.interaction.tent.options.dismantle,tag=tcamp.interaction.south] at @s align xyz positioned ~-1 ~ ~ run function tcamp:interactables/remove/options/south
 
-#if not holdung dye
+#if not holding dye
 execute as @s[tag=tcamp.interaction.tent.options.dye] if entity @p[limit=1,sort=nearest,distance=..0.1,predicate=!tcamp:player/holding_dye] run say need holding dye
 #modify tent colour data
 execute as @s[tag=tcamp.interaction.tent.options.dye] if entity @p[limit=1,sort=nearest,distance=..0.1,predicate=tcamp:player/holding_dye] run function tcamp:tent/modify/data/colour/get_player_colour
 
-
+#removing interaction data
 data remove entity @s[tag=tcamp.interaction,nbt={interaction:{}}] interaction
