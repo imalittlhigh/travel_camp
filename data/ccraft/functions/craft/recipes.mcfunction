@@ -15,27 +15,28 @@
 #   or you could not craft it (THIS IS VERY IMPORTANT TO KEEP IN MIND)
 
 #                    Predicate of crafting recipe                                                                function of crafting recipe
-execute if predicate updated_crafting:recipes/test2_recipe unless data storage ucp:crafting success run function updated_crafting:craft/recipes/test2
+execute if predicate ccraft:recipes/base_tent unless data storage ccraft:crafting success run function ccraft:craft/recipes/base_tent
 
-execute if predicate updated_crafting:recipes/full_recipe unless data storage ucp:crafting success run function updated_crafting:craft/recipes/full
+execute if predicate ccraft:recipes/small_tent unless data storage ccraft:crafting success run function ccraft:craft/recipes/small_tent
 
-execute if predicate updated_crafting:recipes/test_recipe unless data storage ucp:crafting success run function updated_crafting:craft/recipes/test
-#if you want to see how to use nbt edited items in recipes have a loot ak the predicate beneath this text
-execute if predicate updated_crafting:recipes/nbtex_recipe unless data storage ucp:crafting success run function updated_crafting:craft/recipes/nbtex
+execute if predicate ccraft:recipes/medium_tent unless data storage ccraft:crafting success run function ccraft:craft/recipes/medium_tent
+
+execute if predicate ccraft:recipes/large_tent unless data storage ccraft:crafting success run function ccraft:craft/recipes/large_tent
+
 
 
 ##Resets the storages and scores used in crafting
-data remove storage ucp:crafting success
-data merge storage ucp:crafting {count:[0b,0b,0b,0b,0b,0b,0b,0b,0b]}
-scoreboard players reset $ucp.count.0 ucp_dummy
-scoreboard players reset $ucp.count.1 ucp_dummy
-scoreboard players reset $ucp.count.2 ucp_dummy
-scoreboard players reset $ucp.count.3 ucp_dummy
-scoreboard players reset $ucp.count.4 ucp_dummy
-scoreboard players reset $ucp.count.5 ucp_dummy
-scoreboard players reset $ucp.count.6 ucp_dummy
-scoreboard players reset $ucp.count.7 ucp_dummy
-scoreboard players reset $ucp.count.8 ucp_dummy
+data remove storage ccraft:crafting success
+data merge storage ccraft:crafting {count:[0b,0b,0b,0b,0b,0b,0b,0b,0b]}
+scoreboard players reset %ccraft.count.0 ccraft_dummy
+scoreboard players reset %ccraft.count.1 ccraft_dummy
+scoreboard players reset %ccraft.count.2 ccraft_dummy
+scoreboard players reset %ccraft.count.3 ccraft_dummy
+scoreboard players reset %ccraft.count.4 ccraft_dummy
+scoreboard players reset %ccraft.count.5 ccraft_dummy
+scoreboard players reset %ccraft.count.6 ccraft_dummy
+scoreboard players reset %ccraft.count.7 ccraft_dummy
+scoreboard players reset %ccraft.count.8 ccraft_dummy
 
 ##Important note to predicates
 #you can not inclue a count in the predicates!

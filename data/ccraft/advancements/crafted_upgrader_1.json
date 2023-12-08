@@ -1,0 +1,14 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:recipe_crafted",
+        "conditions": {
+          "recipe_id": "ccraft:upgrader_1"
+        }
+      }
+    },
+    "rewards": {
+      "function": "ccraft:crafted/upgrader"
+    }
+  }
+  

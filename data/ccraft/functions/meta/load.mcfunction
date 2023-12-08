@@ -4,7 +4,6 @@
  #
  # Created by imalittlhigh
 ##
-scoreboard objectives add ucp_dummy dummy
+scoreboard objectives add ccraft_dummy dummy
 
-data merge storage ucp:crafting {count:[0b,0b,0b,0b,0b,0b,0b,0b,0b]}
-
+data merge storage ccraft:crafting {count:[0b,0b,0b,0b,0b,0b,0b,0b,0b]}

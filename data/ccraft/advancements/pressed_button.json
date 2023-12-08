@@ -9,7 +9,7 @@
               "entity": "this",
               "predicate": {
                 "type": "minecraft:interaction",
-                "nbt": "{Tags:[\"updated_crafting.interaction.table_button\"]}"
+                "nbt": "{Tags:[\"ccraft.interaction.table_button\"]}"
               }
             }
           ]
@@ -17,7 +17,7 @@
       }
     },
     "rewards": {
-      "function": "updated_crafting:craft/main"
+      "function": "ccraft:craft/main"
     }
   }
   

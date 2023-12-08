@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CCC",
+      "AIR",
+      "PPP"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "A": {
+        "item": "minecraft:stone_axe"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "P": {
+        "tag": "minecraft:planks"
+      },
+      "R": {
+        "item": "minecraft:paper"
+      }
+    },
+    "result": {
+      "item": "minecraft:knowledge_book"
+    }
+  }
+  

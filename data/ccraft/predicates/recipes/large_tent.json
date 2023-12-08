@@ -1,0 +1,12 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "block": {
+        "blocks": [
+          "minecraft:dropper"
+        ],
+        "nbt": "{Items:[{Slot:0b,id:\"minecraft:string\"},{Slot:1b,id:\"minecraft:blast_furnace\"},{Slot:2b,id:\"minecraft:string\"},{Slot:3b,id:\"minecraft:light_gray_wool\",tag:{ccamp.tent_wool:1b}},{Slot:4b,id:\"minecraft:book\",tag:{ccamp.base_tent:1b}},{Slot:5b,id:\"minecraft:light_gray_wool\",tag:{ccamp.tent_wool:1b}},{Slot:6b,id:\"minecraft:iron_nugget\"},{Slot:7b,id:\"minecraft:barrel\"},{Slot:8b,id:\"minecraft:iron_nugget\"}]}"
+      }
+    }
+  }
+  

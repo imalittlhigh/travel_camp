@@ -2,7 +2,7 @@
     "values": [
         "tcamp:meta/tick",
         "ccraft:meta/tick",
-        "pbroll:meta/tick"
+        "pbroll_camp:meta/tick"
 
     ]
     }
