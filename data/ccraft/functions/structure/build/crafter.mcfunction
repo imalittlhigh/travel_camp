@@ -7,7 +7,7 @@
 #removing item from mainhand
 item replace entity @s[gamemode=!creative] weapon.mainhand with air
 #spawning the structure of the crafter
-setblock ~ ~ ~ dropper[facing=up]
+setblock ~ ~ ~ dropper[facing=up]{CustomName:'{"text":"Camp Crafter"}'}
 setblock ~ ~1 ~ polished_blackstone_button[face=floor]
 
 #spawning interaction for the crafter
